@@ -2,5 +2,5 @@
 
 
 kernel.map
-kernel.img
+kernel.bin
 *.o
