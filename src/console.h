@@ -24,7 +24,6 @@ volatile unsigned char *video;
 
 void init_console(void); /* initialize the console driver */
 void printk (const char *msg); /* main kernel console-printing function */
-void putchar (int c);
 
 
 #endif

@@ -14,15 +14,6 @@ void init_console(void) {
   video = (unsigned char *) VIDEO;
 }
 
-/* main kernel console-printing function */
-void printk (const char *msg) {
-  int c;
-
-  while ((c = *msg++) != 0) {
-    putchar (c);
-  }
-}
-
 /* Put the character C on the screen. */
 void putchar (int c) {
   if (c == '\n' || c == '\r') {
@@ -40,4 +31,13 @@ void putchar (int c) {
   xpos++;
   if (xpos >= COLUMNS)
     goto newline;
+}
+
+/* main kernel console-printing function */
+void printk (const char *msg) {
+  int c;
+
+  while ((c = *msg++) != 0) {
+    putchar (c);
+  }
 }
