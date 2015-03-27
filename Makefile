@@ -1,7 +1,7 @@
 
 
 CC=cc
-DEBUG=-g -O0 
+DEBUG=-g -O0
 PRODUCTION=-s -Os
 CFLAGS=-std=gnu99 -mtune=i386 -m32 -c $(PRODUCTION) -ffreestanding -nostdlib -Wall
 ASM=as
@@ -22,13 +22,13 @@ OBJS=src/console.o  \
 
 $(OUTPUT): $(OBJS)
 			$(LINKER) $(LFLAGS) $(OBJS)
-				
+
 .c.o:
 			$(CC) $(CFLAGS) $*.c -o $*.o
-			
+
 .S.o:
 			$(CC) $(CFLAGS) $*.S -o $*.o
-			 
+
 clean:
 			rm -f -R $(OBJS) $(OUTPUT)
 

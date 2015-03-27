@@ -1,8 +1,8 @@
 /* kernel.c:
 
-	Hello World! kernel 
+	Hello World! kernel
 */
-#include "console.h" 
+#include "console.h"
 
 void main()
 {
