@@ -11,7 +11,6 @@ void init_console(void) {
   xpos = 0;
   ypos = 5;
 
-  video = (unsigned char *) VIDEO;
 }
 
 /* Put the character C on the screen. */
@@ -25,8 +24,7 @@ void putchar (int c) {
     return;
   }
 
-  *(video + (xpos + ypos * COLUMNS) * 2) = c & 0xFF;
-  *(video + (xpos + ypos * COLUMNS) * 2 + 1) = ATTRIBUTE;
+  *(VIDEO + (xpos + ypos * COLUMNS) * 2) = c & 0xFF;
 
   xpos++;
   if (xpos >= COLUMNS)
